@@ -1,0 +1,26 @@
+ul {
+  padding: 0px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+li {
+  display: inline;
+}
+
+.gallery-tn {
+  margin: 2px;
+  max-width: 200px;
+  height: 160px;
+  box-shadow: rgb(172, 166, 166) 1px 8px 5px 1px;
+  transition: all .2s ease-in-out;
+}
+
+.gallery-tn:hover {
+  transform: scale(1.2, 1.2);
+  box-shadow: rgba(41, 39, 39, 0.596) 1px 1px 1px 1px;
+}
+
+.tags {
+  margin: 3px;
+}

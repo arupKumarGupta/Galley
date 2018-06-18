@@ -1,0 +1,25 @@
+<h2>
+  {{title}}
+</h2>
+<div class="row">
+  <h5 class="mr-2 mt-2 ml-3">Tags:</h5>
+  <button class="btn btn-primary tags" value="All" [class.active]="filterBy=='all'" (click)="filterBy='all'">
+    All
+  </button>
+  <button class="btn btn-primary tags" *ngFor="let category of categories" value="{{category}}" [class.active]="filterBy==category"
+    (click)="filterBy=category">
+    {{category}}
+  </button>
+
+
+</div>
+<div class="row">
+  <ul id="thumb-list">
+
+    <li *ngFor="let image of (visibleImages  | imageFilter:filterBy)">
+      <a [routerLink]="['/image',image.id]">
+        <img src="{{image.url}}" alt="" class="gallery-tn rounded img-thumbnail">
+      </a>
+    </li>
+  </ul>
+</div>
